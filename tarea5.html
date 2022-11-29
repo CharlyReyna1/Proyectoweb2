@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 5</title>
+    <link rel="Stylesheet" href="estilo5.css">
+</head>
+<body>
+    <div id="cont">
+        <nav class="nav-main">
+          <img src="img/logo2.png" alt="Proyecto Web 2" class="nav-two">
+          <ul class="nav-menu">
+            <h2> <a href="index.html">Pagina principal</a></h2>
+            <li> <a href="tarea1.html">Tarea 1</a></li>
+            <li> <a href="tarea5.html">Tarea 5</a></li>
+            <li> <a href="tarea6.html">Tarea 6</a></li>
+            <li> <a href="tarea7.html">Tarea 7</a></li>
+          </ul>
+          </nav>
+    </div>
+    <div id="contenedor">
+        <div id="navegacion">
+          <div id="descripcion">
+          <h1>Codigos</h1>
+          <h2>En esta tarea teniamos que crear varios programas los cuales eran:</h2>
+          <ol>
+            <li>- Ingresar un nombre completo</li>
+            <li>- La suma de 2 numeros</li>
+            <li>- La funcion de los operadores logicos "==" y "&&"</li>
+            <li>- La funcion de los operadores logicos ">=", "||" y "<="</li>
+            <li>- La funcion del operador logico "!"</li>
+            <li>- Insercion de numeros en un rango</li>
+            <li>- Un juego de adivinar el numero </li>
+          </ol>
+          <br>
+          <h3>
+            Codigo 1
+            import java.util.Scanner;
+            public class Code1 {
+            public static void main(String[] args) {
+            
+            String nombre, apellido;
+            
+            Scanner esc = new Scanner(System.in);
+            
+            System.out.println("Ingrese su nombre");
+            
+            nombre = esc.nextLine();
+            
+            System.out.println("Ingrese su apellidos");
+            
+            apellido = esc.nextLine();
+            
+            System.out.println("Su nombre es "+ nombre+ " "+ apellido);
+            }
+            }
+            </h3>
+            <br>
+            <h3>
+            Codigo 2
+            import java.util.Scanner;
+            public class Code2 {
+            public static void main(String[] args) {
+            int a = 8, b = 9, sum;
+            sum = a + b;
+            System.out.println("La suma es "+ sum);
+            }
+            }
+            </h3>
+            <br>
+            <h3>
+            Código 3
+            import java.util.Scanner;
+            public class Code3 {
+            
+            public static void main(String[] args) {
+            int a, b;
+            Scanner esc = new Scanner(System.in);
+            System.out.println("Darle un valor a A");
+            a = esc.nextInt();
+            System.out.println("Darle un valor a B");
+            b = esc.nextInt();
+            if(a == b && a == b){
+            System.out.println("Funciona");
+            }
+            else{
+            System.out.println("No funciona");
+            }
+            }
+            }
+            </h3>
+            <br>
+            <h3>
+            Código 4
+            import java.util.Scanner;
+            public class Code4 {
+            
+            public static void main(String[] args) {
+            int a, b;
+            Scanner esc = new Scanner(System.in);
+            System.out.println("Darle un valor a A");
+            
+            a = esc.nextInt();
+            System.out.println("Darle un valor a B");
+            b = esc.nextInt();
+            if(a >= b || a <= b){
+            System.out.println("Funciona");
+            }
+            else{
+            System.out.println("No funciona");
+            }
+            }
+            }
+            </h3>
+            <br>
+            <h3>
+            Código 5
+            import java.util.Scanner;
+            public class Code5 {
+            
+            public static void main(String[] args) {
+            boolean a, b;
+            Scanner esc = new Scanner(System.in);
+            System.out.println("Darle un valor a A");
+            a = esc.nextBoolean();
+            System.out.println("Darle un valor a B");
+            b = esc.nextBoolean();
+            System.out.println(!a);
+            System.out.println(!b);
+            }
+            }
+            </h3>
+            <br>
+            <h3>
+            Código 6
+            import java.util.Scanner;
+            public class Code6 {
+            
+            public static void main(String[] args) {
+            int a;
+            Scanner esc = new Scanner(System.in);
+            System.out.println("Darle un valor a A");
+            a = esc.nextInt();
+            if(a >= 1 && a <= 10){
+            System.out.println("Numero insertado con exito");
+            }
+            else{
+            System.out.println("No se pudo insertar el numero");
+            }
+            }
+            }
+            </h3>
+            <br>
+            <h3>
+            Código 7
+            import java.util.Scanner;
+            
+            public class Code7 {
+            
+            public static void main(String[] args) {
+            
+            Scanner sc = new Scanner(System.in);
+            
+            int a = (int) ((Math.random() * 10)+1);
+            int b;
+            
+            int i;
+            
+            System.out.println("El juego consiste en averiguar un número secreto de 10
+            posibles.");
+            
+            System.out.print("Tienes 5 intentos. Escribe un número entre 1 y 10: ");
+            b = sc.nextInt();
+            
+            for (i=0; i<=4; i++) {
+            if (a == b) {
+            System.out.println("¡Has acertado!");
+            break; }
+            else if (i == 4) {
+            System.out.println("Lo siento: ¡has perdido!. El número era el: " + a);
+            break; }
+            else if (a > b)
+            System.out.println("El número secreto es MAYOR que " + b);
+            else if (a < b)
+            System.out.println("El número secreto es MENOR que " + b);
+            if (i <=1) {
+            System.out.print("Otro intento: ");
+            b = sc.nextInt(); }
+            else if (i ==2) {
+            int x = (int) (a/10);
+            System.out.println("Una pista, la primera cifra es " + x);
+            System.out.print("Inténtalo de nuevo: ");
+            b = sc.nextInt(); }
+            else if (i >= 3) {
+            System.out.print("Oh, oh... ÚLTIMO intento: ");
+            
+            b = sc.nextInt(); }
+            }
+            }
+            }
+            </h3>
+          </div>
+        </div>
+        <div id="noticias">
+          <h1></h1>
+        </div>
+        <div id="contenido">
+          <div id="fotos">
+
+          </div>
+        </div>
+    </div>
+    <div id="footer-links">
+      <div id="conter">
+        <h1>Creador:</h1>
+        <h1>Carlos Armando</h1>
+        <h1>Materia:</h1>
+        <h1>Programacion Web 2</h1>
+        <h1>Grupo:</h1>
+        <h1>1758</h1>
+      </div>
+    </div>
+</body>
+</html>
